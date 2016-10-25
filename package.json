@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@types/jest": "^15.1.32",
+    "@types/react": "^0.14.41",
+    "@types/react-dom": "^0.14.18",
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",
@@ -42,6 +45,9 @@
     "rimraf": "2.5.4",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
+    "ts-jest": "^0.1.9",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.0.3",
     "url-loader": "0.5.7",
     "webpack": "1.13.2",
     "webpack-dev-server": "1.16.2",
@@ -59,6 +65,8 @@
   },
   "jest": {
     "moduleFileExtensions": [
+      "tsx",
+      "ts",
       "jsx",
       "js",
       "json"
@@ -67,12 +75,17 @@
       "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/FileStub.js",
       "^.+\\.css$": "<rootDir>/config/jest/CSSStub.js"
     },
+    "scriptPreprocessor": "<rootDir>/node_modules/ts-jest/preprocessor.js",
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "testPathIgnorePatterns": [
       "<rootDir>/(build|docs|node_modules)/"
     ],
+    "globals": {
+      "__TS_CONFIG__": "<rootDir>/tsconfig.json"
+    },
     "testEnvironment": "node"
   },
   "babel": {
