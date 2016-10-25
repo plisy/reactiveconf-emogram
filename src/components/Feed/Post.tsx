@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { EmotionData } from '../../EmotionData';
 import Card from './Card';
+import EmoticonPicker from '../../EmoticonPicker';
 
 export interface PostData {
     timestamp: number;
@@ -36,10 +37,10 @@ class Post extends React.Component<PostData, void> {
 
         this.canvasContext.drawImage(this.image, 0, 0);
 
-        const smily = this.createImageComponent('https://static-asm.secure.skypeassets.com/pes/v1/emoticons/happy/views/default_160');
 
-        smily.onload = () => {
-            this.props.emotions.forEach(emotion => {
+        this.props.emotions.forEach(emotion => {
+            const smily = this.createImageComponent(EmoticonPicker.getEmoticonUrl(emotion));
+            smily.onload = () => {
                 this.canvasContext && this.canvasContext.drawImage(
                     smily,
                     emotion.faceRectangle.left,
@@ -47,9 +48,8 @@ class Post extends React.Component<PostData, void> {
                     emotion.faceRectangle.width,
                     emotion.faceRectangle.height,
                 )
-            });
-        }
-
+            }
+        });
     }
 
     createImageComponent(url: string): HTMLImageElement {
