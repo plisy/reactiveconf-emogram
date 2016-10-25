@@ -1,5 +1,15 @@
+/*
+    Font downloaded from: http://www.fontspace.com/last-soundtrack/the-quiet-scream
+    date: 24.10.2016
+*/
+@font-face {
+    font-family: EmoFont;
+    src: url(../public/the_quiet_scream.ttf);
+    font-weight: bold;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }

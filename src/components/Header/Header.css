@@ -1,0 +1,28 @@
+.Header {
+    font-family: EmoFont;
+
+    display: flex;
+    align-items: center;
+
+    padding: 26px 40px;
+
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.Header .Header-logo {
+    height: 42px;
+}
+
+.Header .Header-title {
+    font-size: 24px;
+}
+
+.Header .Header-title::before {
+    margin: 0 16px;
+    font-size: 42px;
+    font-family: sans-serif;
+    font-weight: 100;
+    content: " ";
+    border-left: 1px solid;
+}
