@@ -33,7 +33,7 @@ TypeScript: https://www.typescriptlang.org/
 ### Step 0
 Clone this repo and run the scripts above.
 
-###Step 1 - Read the photo and send it to the service
+### Step 1 - Read the photo and send it to the service
 	— Read the photo url from the disk
 	— Call the service with the photo and log emotion data
 	— Display the photo as an image in the stream
@@ -41,12 +41,12 @@ Clone this repo and run the scripts above.
     - Add a typing for server response
 	Service URL: https://faceprocessor.azurewebsites.net/api/EmotionDetector
 
-Step 2. Displaying a scaled image in a canvas
+### Step 2. Displaying a scaled image in a canvas
 	- Add a canvas component to your Post component
 	— Calculate the scale of the image 
 	— Draw the image on the canvas
 	— Use the emoticon from https://static-asm.secure.skypeassets.com/pes/v1/emoticons/smile/views/default_160 and draw it on the canvas using the faceRectangle data (remember to first load the image!)
 
-Step 3. Add the logic to determine which emoticon should be used depending on the person's emotions
+### Step 3. Add the logic to determine which emoticon should be used depending on the person's emotions
 	— Suggested: sort by emotions and pick top pick
 	- Alternatively: go creative
